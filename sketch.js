@@ -144,6 +144,17 @@ function createControlColor() {
   colorInverse = 1
 }
 
+// ----------------------
+// Task 6
+// Create a new ball here also
+// ----------------------
+function keyPressed() {
+  if (key === "m") {
+    createBall2()
+  }
+  createRandomBGColor()
+}
+
 /** 
 Hex Codes for the Official Avenues Colors 
 
