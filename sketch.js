@@ -150,7 +150,7 @@ function createControlColor() {
 // ----------------------
 function keyPressed() {
   if (key === "m") {
-    createBall2()
+    createBall()
   }
   createRandomBGColor()
 }
