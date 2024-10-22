@@ -92,6 +92,23 @@ function draw() {
   //   and then bouncing it back. This will require a number of changes
   
 }
+
+// Task 5
+// default parameter values. 
+// You can see when we call this function in setup, we don't pass any values in.
+// In that case, the defaults are used. 
+// uncomment the following line and then update the body of the function to use
+//   xMin, xMax, yMin, and yMax in the random calls
+// Then, in setup, change the setRandomPosition call to specify where your ball
+//   should roughly be at the start. 
+// function setRandomPosition( xMin = 0, yMin = 0, xMax = width, yMax = height) {
+
+//Task 5
+function setRandomPosition(xMin = 0, xMax = width, yMin = 0, yMax = height){
+  x = Random(xMin, xMax)
+  y = Random (yMin, yMax)
+}
+
 //Task 1
 function createBall() {
   setRandomPosition()
