@@ -25,6 +25,27 @@ function setup() {
   createControlColor()
 }
 
+//Task 2
+function draw() {
+  background(bg)
+  fill(color(r,g,b))
+  circle(x,y,radius)
+  x += dx // x = x + dx
+  y += dy // y = y + dy
+  if(x < 0 || x > width) {
+    dx *= -1
+  }
+  if(y < 0 || y > height) {
+    dy *= -1
+  } 
+  
+  if(x-0.5*radius <= 0 || x+0.5*radius >= width) {
+    dx *= -1
+  }
+  if(y-0.5*radius <= 0 || y+0.5*radius >= height) {
+    dy *= -1
+  } 
+
 //Task 1
 function createBall() {
   setRandomPosition()
