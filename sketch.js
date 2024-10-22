@@ -39,6 +39,8 @@ function draw() {
     dy *= -1
   } 
   
+//Task 3
+  
   if(x-0.5*radius <= 0 || x+0.5*radius >= width) {
     dx *= -1
   }
@@ -46,6 +48,50 @@ function draw() {
     dy *= -1
   } 
 
+//Task 4a
+  g += colorChange * colorInverse
+
+//Task 4b
+  if(g >= 255 || g <= 0) {
+    colorInverse += -1
+  }
+  
+  // ----------------------
+  // Task 2
+  // Remember that || means "or" and that && means "and"
+  // OR means that if either thing is true, the whole thing ("expression")
+  //   is true
+  // AND means that if both things are true, then the whole expression is
+  //   true. 
+  // Consolidate the x boundary checks into one expression 
+  // Consolidate the y boundary checks into one expression
+  // ----------------------
+  // ----------------------
+  // Task 3 
+  // If you're paying attention, you'll note that the ball isn't bouncing
+  //   when it hits the edge, but rather when the center hits the edge. 
+  // Adjust the boundary checks to make it so that ball bounces when it 
+  //   first hits the edge
+  // ----------------------
+  // ----------------------
+  // Task 4a
+  // Write code that incrementally changes at least one of the color channel
+  //   channels (r,g,b). You can increase or decrease the value(s) and by
+  //   however much you like between 0.1 and 15
+  // ----------------------
+  // ----------------------
+  // Task 4b
+  // Remember that the range of color values are integers from 0-255. 
+  // Write code that constrains the changing color channel value(s) to that
+  //   range by "wrapping" the values around (a number greater than 255 
+  //   becomes a number above zero, and a number less than zero becomes a
+  //   number greater than zero)
+  // ALTERNATIVELY
+  // Write code that bounces the number back and forth between 0 and 255 by
+  //   alternately increasing the value to 255 then decreasing it down to 0
+  //   and then bouncing it back. This will require a number of changes
+  
+}
 //Task 1
 function createBall() {
   setRandomPosition()
@@ -74,3 +120,30 @@ function createRandomColor() {
 function createRandomBGColor() {
   bg = color(random(255),random(255),random(255))
 }
+
+//Task 4a
+function createControlColor() {
+  colorChange = 1
+  colorInverse = 1
+}
+
+/** 
+Hex Codes for the Official Avenues Colors 
+
+#ffffff (white)
+#000000 (black)
+#B7B09C (ash)
+#D3AE6F (ochre)
+#3D68B2 (indigo)
+#267355 (moss)
+#44C3D4 (pristine blue)
+#9796C9 (violet)
+#CAC3BC (nimbus)
+#C5D982 (pistachio)
+#8A916A (olive)
+#C17E60 (terracotta)
+#F5CD64 (gold)
+#C3411E (clay)
+#0D9A48 (grass)
+#273879 (navy)
+*/
