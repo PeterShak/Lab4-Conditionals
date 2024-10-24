@@ -149,12 +149,11 @@ function createControlColor() {
 // Create a new ball here also
 // ----------------------
 function keyPressed() {
-  if (key === "m") {
+  if (key === "k") {
     createBall()
   }
-  createRandomBGColor()
+  console.log(key)
 }
-
 /** 
 Hex Codes for the Official Avenues Colors 
 
